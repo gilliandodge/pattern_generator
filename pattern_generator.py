@@ -1,49 +1,59 @@
 #goal: create a program that generates a sweater pattern from a pre-set pattern
 #tailor the pattern to specific gauge and size
 
-#outline sweater pattern options
+#pattern library
 #yoke sweater
+#raglan sweater (once i figure out how to make a raglan sweater pattern)
 
-#raglan sweater
 
-
-#size options (display size measurements)
+#size option library (display size measurements)
 #all sizes in inches
-#extra-small
-xs_bust = 37.5
-xs_length = 18.5
-xs_arm_circ = 
-xs_sleeve_length = 
+#may have to adjust sizing per pattern, this is for yoke sweater as of rn
 
-#small
-s_bust = 40.25
-s_length = 19.0
-s_arm_circ = 
-s_sleeve_length = 
-
-#medium
-m_bust = 42.5
-m_length = 19.75
-m_arm_circ = 
-m_sleeve_length = 
-
-#large
-l_bust = 45.25
-l_length = 20.5
-l_arm_circ = 
-l_sleeve_length = 
-
-#extra-large
-xl_bust = 49.25
-xl_length = 21.25
-xl_arm_circ = 
-xl_sleeve_length = 
-
-#xxl
-xxl_bust = 52.0
-xxl_length = 21.75
-xxl_arm_circ = 
-xxl_sleeve_length = 
+sizes = [
+    {
+        "size": "XS", 
+        "bust" : 37.5,
+        "length" : 18.5,
+        "arm_circ" : 15.5,
+        "sleeve_length" : 15.0,
+    },
+    {
+        "size": "Small", 
+        "bust" : 40.25,
+        "length" : 19.0,
+        "arm_circ" : 17.0,
+        "sleeve_length" : 15.0,
+    },
+    {
+        "size": "Medium", 
+        "bust" : 42.5,
+        "length" : 19.75,
+        "arm_circ" : 17.5,
+        "sleeve_length" : 15.5,
+    },
+    {
+        "size": "Large", 
+        "bust" : 45.25,
+        "length" : 20.5,
+        "arm_circ" : 18.25,
+        "sleeve_length" : 15.5,
+    }
+        {
+        "size": "XL", 
+        "bust" : 49.25,
+        "length" : 21.25,
+        "arm_circ" : 20.0,
+        "sleeve_length" : 15.75,
+    }
+        {
+        "size": "XXL", 
+        "bust" : 52.0,
+        "length" : 21.75,
+        "arm_circ" : 22.0,
+        "sleeve_length" : 15.75,
+    }
+]
 
 
 #gauge calculator
@@ -54,6 +64,8 @@ xxl_sleeve_length =
 #ask needle size (account for US sizing or mm sizing)
 #ask how many sts for the gauge
 #ask how many rows are needed for the gauge
+
+#display gauge in sts x row format
 
 #input for size
 
