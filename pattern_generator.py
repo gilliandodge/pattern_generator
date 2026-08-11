@@ -9,8 +9,8 @@
 #size option library (display size measurements)
 #all sizes in inches
 #may have to adjust sizing per pattern, this is for yoke sweater as of rn
-
-sizes = [
+def size_library():
+    sizes = [
     {
         "size": "XS", 
         "bust" : 37.5,
@@ -38,38 +38,92 @@ sizes = [
         "length" : 20.5,
         "arm_circ" : 18.25,
         "sleeve_length" : 15.5,
-    }
+    },
         {
         "size": "XL", 
         "bust" : 49.25,
         "length" : 21.25,
         "arm_circ" : 20.0,
         "sleeve_length" : 15.75,
-    }
+    },
         {
         "size": "XXL", 
         "bust" : 52.0,
         "length" : 21.75,
         "arm_circ" : 22.0,
         "sleeve_length" : 15.75,
-    }
-]
+    }]
+
+    print("Size Chart:")
+    for size in sizes:
+        print(f"{size['size']}: Bust - {size['bust']}in, Length - {size['length']}in, Arm Circumference - {size['arm_circ']}in, Sleeve Length - {size['sleeve_length']}in")
 
 
-#gauge calculator
-#gauge = 4x4 in
-# sts x rows
-#needle size
+def menu():
+       print("Thank you for using the sweater pattern generator!")
+       print("Please select from the following options: ")
+       print("1. Generate a sweater pattern")
+       print("2. View size chart")
+       print("3. View pattern library")
+       print("4. Use yardage calculator") #work in progress
+       print("5. Exit")
 
-#ask needle size (account for US sizing or mm sizing)
-#ask how many sts for the gauge
-#ask how many rows are needed for the gauge
+       user_choice = int(input("Menu Choice: "))
+       if user_choice == 1:
+              pattern_generator()
+       elif user_choice == 2:
+              size_library()
+       elif user_choice == 3:
+              pattern_library()
+       elif user_choice == 4:
+              yardage_calculator()
+       elif user_choice == 5:
+              print("Thank you for using the sweater pattern generator!")
+              print("Program by Gillian Dodge, 2026")
+              exit()
+        
 
-#display gauge in sts x row format
 
-#input for size
+def pattern_generator():
+    print("Welcome to the sweater pattern generator!")
+    print("Please enter the following information to generate your pattern:")
+    print(' ')
+    #ask needle size (account for US sizing or mm sizing)
+    needle_size = input("Enter your needle size (US Sizing): ")
+    print(' ')
+    #ask how many sts for the gauge
+    print("The gauge is measured in stitches and rows per 4x4inch square.")
+    print(' ')
+    gauge_sts = int(input("Enter the gauge stitch count: "))
+    print(' ')
+    #ask how many rows are needed for the gauge
+    gauge_rows = int(input("Enter the gauge row count: "))
+    print(' ')
+    #display gauge in sts x row format
+    print(f"Your gauge is {gauge_sts} sts x {gauge_rows} rows per 4x4 inch square.")
+    #input for size
+    print(' ')
+    print(' ')
+    size_selection = input("Enter your desired size (XS, Small, Medium, Large, XL, XXL): ")
+    print(' ')
+    print(' ')
+    #input for pattern selection
+    print("Pattern Library")
+    print("1. Yoke Sweater")
+    print("2. Raglan Sweater")
+    print(' ')
+    pattern_selection = int(input("Enter your desired pattern from the menu options: "))
 
-#input for pattern selection
+    if pattern_selection == 1:
+            print("You have selected the yoke sweater pattern.")
+    if pattern_selection == 2:
+            print("This pattern is not available yet.")
+    else:
+            print("Invalid pattern selection. Please select a valid pattern.")
 
 
 #save option for textfile of pattern
+
+
+#run program
+menu()
