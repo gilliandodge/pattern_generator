@@ -4,9 +4,6 @@
 import math
 import scarf_pattern
 
-#pattern library
-#yoke sweater
-#raglan sweater (once i figure out how to make a raglan sweater pattern)
 
 #size option library (display size measurements)
 #all sizes in inches
@@ -59,6 +56,7 @@ def size_library():
     print("Size Chart:")
     for size in sizes:
         print(f"{size['size']}: Bust - {size['bust']}in, Length - {size['length']}in, Arm Circumference - {size['arm_circ']}in, Sleeve Length - {size['sleeve_length']}in")
+        print(' ')
 
 
 def menu():
