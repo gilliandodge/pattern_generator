@@ -15,6 +15,7 @@ Future Goals
 - Add feature that calculates the amound of yarn needed based off the gauge, pattern, and size
 - Add more patterns to the database (scarves, hats, etc)
 - Add some sort of colorwork feature using open-source pixel art patterns available online
+- Learn how to make socks and add that to the generator
 
 
 
