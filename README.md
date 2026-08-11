@@ -1,4 +1,4 @@
-# sweater_pattern_generator
+Knitting Pattern Generator
 Main Idea: I want an easy way to make sweaters and I don't wanna do the math by hand
 
 Background: I have been knitting for the past 10 years, and I struggle to find patterns for the yarn I buy or already have on hand. I also graduated with a B.S. in Computer Information Systems, and want to combine my hobbies with what I learned in college. I also am interested in the connection between fiber arts and computer programming 
