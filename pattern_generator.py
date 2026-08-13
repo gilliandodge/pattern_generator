@@ -3,6 +3,7 @@
 
 import math
 import scarf_pattern
+import kinda_yoke_pattern
 
 
 #size option library (display size measurements)
@@ -53,10 +54,14 @@ def size_library():
         "sleeve_length" : 15.75,
     }]
 
-    print("Size Chart:")
-    for size in sizes:
-        print(f"{size['size']}: Bust - {size['bust']}in, Length - {size['length']}in, Arm Circumference - {size['arm_circ']}in, Sleeve Length - {size['sleeve_length']}in")
-        print(' ')
+    print("--- AVAILABLE SIZES ---") 
+    for i, size in enumerate(sizes): 
+        print(f"[{i}] {size['size']}: Bust - {size['bust']}in, Length - {size['length']}in, Arm Circ - {size['arm_circ']}in, Sleeve - {size['sleeve_length']}in") 
+    print(' ')
+    
+    # Let the user pick a size
+    choice = int(input("Enter the number of the size you want to make: "))
+    return sizes[choice]
 
 
 def menu():
@@ -127,8 +132,10 @@ def pattern_generator():
         size_selection = input("Enter your desired size (XS, Small, Medium, Large, XL, XXL): ")
         print(' ')
         print(' ')
-        import kinda_yoke_pattern
-        kinda_yoke_pattern.weird_sweater()
+
+        inch_sts, inch_rows, needle_size = gauge()
+        kinda_yoke_pattern.weird_sweater(inch_sts, inch_rows, needle_size   )
+
     elif pattern_selection == 2:
         print("This pattern is not available yet.")
     elif pattern_selection == 3:
@@ -138,6 +145,7 @@ def pattern_generator():
 
         inch_sts, inch_rows, needle_size = gauge()
         scarf_pattern.scarf(inch_sts, inch_rows, needle_size)
+
     elif pattern_selection == 4:
         menu()
     else:
